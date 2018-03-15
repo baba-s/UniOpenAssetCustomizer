@@ -14,11 +14,11 @@ https://github.com/baba-s/unity-open-asset-customizer/blob/master/OpenAssetCusto
 
 # クイックスタート
 
-[f:id:baba_s:20180315202325p:plain]
+![](https://cdn-ak.f.st-hatena.com/images/fotolife/b/baba_s/20180315/20180315202325.png)
 
 Project ビューで「Settings.asset」を選択すると  
 
-[f:id:baba_s:20180315202346p:plain]
+![](https://cdn-ak.f.st-hatena.com/images/fotolife/b/baba_s/20180315/20180315202346.png)
 
 Inspector に設定画面が表示されます  
 
