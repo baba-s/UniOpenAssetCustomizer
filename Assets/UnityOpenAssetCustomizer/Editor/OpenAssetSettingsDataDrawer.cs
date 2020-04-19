@@ -1,10 +1,10 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace KoganeEditorLib
+namespace UniOpenAssetCustomizer
 {
 	[CustomPropertyDrawer( typeof( OpenAssetSettingsData ) )]
-	public sealed class OpenAssetSettingsDataDrawer : PropertyDrawer
+	internal sealed class OpenAssetSettingsDataDrawer : PropertyDrawer
 	{
 		public override void OnGUI( Rect position, SerializedProperty property, GUIContent label )
 		{
@@ -12,25 +12,26 @@ namespace KoganeEditorLib
 			{
 				position.height = EditorGUIUtility.singleLineHeight;
 
+				var extensionRect = new Rect( position )
+				{
+				};
 				var applicationPathRect = new Rect( position )
 				{
+					y     = extensionRect.yMax + 2,
 					width = position.width - 18,
 				};
 				var dialogRect = new Rect( position )
 				{
-					x = applicationPathRect.xMax + 2,
+					x     = applicationPathRect.xMax + 2,
+					y     = extensionRect.yMax + 2,
 					width = 16,
 				};
-				var extensionRect = new Rect( position )
-				{
-					y = applicationPathRect.yMax + 2,
-				};
-
-				var applicationPathProperty = property.FindPropertyRelative( "m_applicationPath" );
+				
 				var extensionProperty = property.FindPropertyRelative( "m_extension" );
-
-				applicationPathProperty.stringValue = EditorGUI.TextField( applicationPathRect, applicationPathProperty.displayName, applicationPathProperty.stringValue );
+				var applicationPathProperty = property.FindPropertyRelative( "m_applicationPath" );
+				
 				extensionProperty.stringValue = EditorGUI.TextField( extensionRect, extensionProperty.displayName, extensionProperty.stringValue );
+				applicationPathProperty.stringValue = EditorGUI.TextField( applicationPathRect, applicationPathProperty.displayName, applicationPathProperty.stringValue );
 
 				if ( GUI.Button( dialogRect, GUIContent.none, "ShurikenDropdown" ) )
 				{
