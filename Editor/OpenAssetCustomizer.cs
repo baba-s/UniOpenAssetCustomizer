@@ -25,7 +25,8 @@ namespace Kogane.Internal
 				;
 
 			var list = settings.List;
-			var data = list.FirstOrDefault( c => c.Extension == assetExtension );
+
+			var data = list?.FirstOrDefault( c => c.Extension == assetExtension );
 
 			if ( data == null ) return false;
 
