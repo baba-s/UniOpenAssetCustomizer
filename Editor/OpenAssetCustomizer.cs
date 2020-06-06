@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEditor.Callbacks;
 
-namespace UniOpenAssetCustomizer
+namespace Kogane.Internal
 {
 	internal static class OpenAssetCustomizer
 	{

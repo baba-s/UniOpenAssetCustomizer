@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace UniOpenAssetCustomizer
+namespace Kogane.Internal
 {
 	[Serializable]
 	internal sealed class OpenAssetSettingsData

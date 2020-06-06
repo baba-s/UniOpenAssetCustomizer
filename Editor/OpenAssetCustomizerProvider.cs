@@ -3,7 +3,7 @@ using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace UniOpenAssetCustomizer
+namespace Kogane.Internal
 {
 	internal sealed class OpenAssetCustomizerProvider : SettingsProvider
 	{

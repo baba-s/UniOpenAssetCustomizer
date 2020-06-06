@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace UniOpenAssetCustomizer
+namespace Kogane.Internal
 {
 	[CustomPropertyDrawer( typeof( OpenAssetSettingsData ) )]
 	internal sealed class OpenAssetSettingsDataDrawer : PropertyDrawer
