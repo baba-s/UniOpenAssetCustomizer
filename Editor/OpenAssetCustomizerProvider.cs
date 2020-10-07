@@ -65,7 +65,7 @@ namespace Kogane.Internal
 		[SettingsProvider]
 		private static SettingsProvider Create()
 		{
-			var path     = "Preferences/UniOpenAssetCustomizer";
+			var path     = "Kogane/UniOpenAssetCustomizer";
 			var provider = new OpenAssetCustomizerProvider( path, SettingsScope.User );
 
 			return provider;
